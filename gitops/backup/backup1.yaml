@@ -1,0 +1,14 @@
+kind: Backup
+apiVersion: velero.io/v1
+metadata:
+  name: backup1
+  namespace: openshift-adp
+spec:
+  csiSnapshotTimeout: 10m0s
+  defaultVolumesToFsBackup: false
+  includedNamespaces:
+    - deployment-oadp-demo
+  itemOperationTimeout: 4h0m0s
+  snapshotMoveData: true 
+  storageLocation: default-dpa-1
+  ttl: 720h0m0s 

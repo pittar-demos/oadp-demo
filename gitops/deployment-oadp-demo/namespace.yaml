@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: "Namespace with a Deployment and PVC to backup and restore."
+    openshift.io/display-name: "Deployment OADP Demo"
+  labels:
+    kubernetes.io/metadata.name: deployment-oadp-demo
+  name: deployment-oadp-demo
+spec: {}

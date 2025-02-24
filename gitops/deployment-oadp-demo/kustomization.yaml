@@ -1,0 +1,8 @@
+namespace: deployment-oadp-demo
+
+resources:
+  - namespace.yaml
+  - pvc.yaml
+  - deploy.yaml
+  - svc.yaml
+  - route.yaml

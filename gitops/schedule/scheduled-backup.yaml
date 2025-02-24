@@ -1,0 +1,20 @@
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  namespace: openshift-adp
+  name: deployment-oadp-demo
+  labels:
+    app.kubernetes.io/instance: deployment-oadp-demo
+spec:
+  schedule: '*/20 * * * *'
+  template:
+    hooks: {}
+    csiSnapshotTimeout: 10m0s
+    defaultVolumesToFsBackup: false
+    includedNamespaces:
+      - deployment-oadp-demo
+    itemOperationTimeout: 4h0m0s
+    snapshotMoveData: true 
+    storageLocation: default-dpa-1
+    ttl: 720h0m0s
+  useOwnerReferencesInBackup: false

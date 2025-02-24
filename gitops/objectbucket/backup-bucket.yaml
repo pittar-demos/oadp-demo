@@ -1,0 +1,10 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: backup-bucket
+  namespace: openshift-adp
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  generateBucketName: oadp-object-storage
+  storageClassName: openshift-storage.noobaa.io
